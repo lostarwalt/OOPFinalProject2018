@@ -36,7 +36,7 @@ public class TemperatureGUI extends JFrame {
 	public class TempCalc implements ActionListener {
 
 		public void actionPerformed(ActionEvent e) {
-			String from = (String) fromChoice.getSelectedItem();
+			//String from = (String) fromChoice.getSelectedItem();
 			String to = (String) toChoice.getSelectedItem();
 			double value = Double.parseDouble(inputF.getText());
 
@@ -48,8 +48,8 @@ public class TemperatureGUI extends JFrame {
 			} else {
 				Temperature t = new Temperature();
 				String result = t.convertFtoC(value) + "";
+				outputF.setText(result);
 			}
-
 		}
 	}
 
@@ -73,15 +73,14 @@ public class TemperatureGUI extends JFrame {
 
 	}
 
-
 	public void createp1() {
 		p1.add(input);
 		p1.add(inputF);
 	}
 
 	public void createp2() {
-		p2.add(fromTemp);
-		p2.add(fromTemp);
+		//p2.add(fromTemp);
+		//p2.add(fromChoice);
 		p2.add(toTemp);
 		p2.add(toChoice);
 	}
