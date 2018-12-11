@@ -1,0 +1,87 @@
+package edu.century.finalproject;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JRadioButton;
+import javax.swing.JPanel;
+import java.awt.GridLayout;
+import javax.swing.JLabel;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class FirstWindow {
+
+	private JFrame frame;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					FirstWindow window = new FirstWindow();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public FirstWindow() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 450, 300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(new GridLayout(0, 1, 0, 0));
+		
+		JLabel lblSelectTypeOf = new JLabel("Select type of conversion:");
+		frame.getContentPane().add(lblSelectTypeOf);
+		
+		JPanel panel = new JPanel();
+		frame.getContentPane().add(panel);
+		panel.setLayout(new GridLayout(1, 0, 0, 0));
+		
+		JRadioButton rdbtn1 = new JRadioButton("Temperature");
+		panel.add(rdbtn1);
+		rdbtn1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(e.getSource()==rdbtn1) {
+					
+				}
+			}
+		});
+		JRadioButton rdbtn2 = new JRadioButton("Currency");
+		panel.add(rdbtn2);
+		rdbtn2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(e.getSource()==rdbtn2) {
+			}
+		}});
+		JRadioButton rdbtn3 = new JRadioButton("Volume");
+		panel.add(rdbtn3);
+
+		JRadioButton rdbtn4 = new JRadioButton("Mass");
+		panel.add(rdbtn4);
+		rdbtn4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(e.getSource()==rdbtn4) {
+					
+				}
+			}
+		});
+		}
+	}
+       
+
